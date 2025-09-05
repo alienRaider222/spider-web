@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title></title>
+  <link href="css/style.css" rel="stylesheet">
+  <meta content="" name="description">
+
+  <meta content="" property="og:title">
+  <meta content="" property="og:type">
+  <meta content="" property="og:url">
+  <meta content="" property="og:image">
+  <meta content="" property="og:image:alt">
+
+  <link href="/favicon.ico" rel="icon" sizes="any">
+  <link href="/icon.svg" rel="icon" type="image/svg+xml">
+  <link href="icon.png" rel="apple-touch-icon">
+
+  <link href="site.webmanifest" rel="manifest">
+  <meta content="#fafafa" name="theme-color">
+</head>
+<body>
+<center>
+  <img src="spider-web.png"/>
+  <p>Hello world! This is spider web.</p>
+  <div style='background-color:red;'>
+    <input id='searchbox'>
+    <button onclick='doSearch (searchbox.value)'>search</button>
+    <script>
+      var webData = [
+        {tag: 'videos', url: 'https://www.youtube.com'},
+        {tag: 'facts', url: 'https://en.wikipedia.org/'},
+        {tag: 'news', url: 'https://www.bbc.co.uk/news'},
+        {tag: 'jokes', url: 'https://www.ducksters.com/jokes/silly.php'},
+        {tag: 'games', url: 'https://www.coolmathgames.com'},
+        {tag: 'programmes', url: 'https://www.netflix.com/browse/genre/10659'},
+        {tag: 'create' , url: 'https://scratch.mit.edu/'},
+        {tag:'maths games', url: 'https://www.mathsframe.co.uk'}
+      ];
+
+      function doSearch(x) {
+        for (n = 0; n < webData.length; n++) {
+          if (x === webData[n].tag) {
+            document.write('<a href ="' + webData[n].url + '"/>' + webData[n].url + '</a>');
+          }
+        }
+      }
+    </script>
+
+</center>
+</body>
+</html>
